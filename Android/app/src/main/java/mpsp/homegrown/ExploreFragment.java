@@ -1,10 +1,12 @@
 package mpsp.homegrown;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -29,7 +31,48 @@ public class ExploreFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_explore, container, false);
+        View view = inflater.inflate(R.layout.fragment_explore, container, false);
+        //Getting buttons
+        LinearLayout k1 = (LinearLayout) view.findViewById(R.id.kosarica1);
+        LinearLayout k2 = (LinearLayout) view.findViewById(R.id.kosarica2);
+        LinearLayout k3 = (LinearLayout) view.findViewById(R.id.kosarica3);
+        LinearLayout k4 = (LinearLayout) view.findViewById(R.id.kosarica4);
+        //LinearLayout k5 = (LinearLayout) view.findViewById(R.id.kosarica5);
+
+        k1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Start checkout activity
+                Intent intent = new Intent(getActivity(), CheckOutActivity.class);
+                startActivity(intent);
+            }
+        });
+        k2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Start checkout activity
+                Intent intent = new Intent(getActivity(), CheckOutActivity.class);
+                startActivity(intent);
+            }
+        });
+        k3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Start checkout activity
+                Intent intent = new Intent(getActivity(), CheckOutActivity.class);
+                startActivity(intent);
+            }
+        });
+        k4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Start checkout activity
+                Intent intent = new Intent(getActivity(), CheckOutActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        return view;
     }
 //
 //    // TODO: Rename parameter arguments, choose names that match

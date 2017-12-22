@@ -18,7 +18,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".BadgesPointsActivity"></activity>
+        <activity android:name=".BadgesPointsActivity" />
+        <activity android:name=".CheckOutActivity"></activity>
     </application>
 
 </manifest>

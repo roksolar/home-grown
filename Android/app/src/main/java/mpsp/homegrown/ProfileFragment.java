@@ -46,7 +46,7 @@ public class ProfileFragment extends Fragment {
 
             @Override
             public void onClick(View view) {
-                //Start badegs & points activity
+                //Start badges & points activity
                 Intent intent = new Intent(getActivity(), BadgesPointsActivity.class);
                 startActivity(intent);
             }

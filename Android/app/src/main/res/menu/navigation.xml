@@ -11,7 +11,7 @@
         android:title="Producers" />
     <item
         android:id="@+id/navigation_profile"
-        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:icon="@drawable/ic_account"
         android:title="Profile" />
 
 
