@@ -54,18 +54,18 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@color/cardview_light_background"
-                    android:elevation="4dp"
                     android:layout_margin="5dp"
                     android:layout_weight="1"
+                    android:background="@color/cardview_light_background"
+                    android:elevation="4dp"
                     android:orientation="horizontal"
                     android:padding="15dp">
 
                     <ImageView
                         android:id="@+id/imageView3"
                         android:layout_width="wrap_content"
-                        android:gravity="center_vertical"
                         android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
                         app:srcCompat="@drawable/ic_minus_box_outline" />
 
                     <TextView
@@ -73,10 +73,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:text="Milk"
                         android:gravity="center_vertical"
-                        android:textSize="14sp"
                         android:paddingLeft="15dp"
+                        android:text="Milk"
+                        android:textSize="14sp"
                         android:textStyle="bold" />
 
                     <TextView
@@ -92,10 +92,14 @@
         </ScrollView>
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/checkoutPayB"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#465d43"
+            android:onClick="pay"
             android:text="Pay (16.4€)"
+            android:textColor="@color/cardview_light_background"
             tools:layout_editor_absoluteX="8dp"
             tools:layout_editor_absoluteY="465dp" />
 
