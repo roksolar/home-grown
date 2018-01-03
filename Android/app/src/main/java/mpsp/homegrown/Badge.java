@@ -8,13 +8,14 @@ public class Badge {
     private int id;
     private String name;
     private int amount;
-    private String progress;
+    private int progress;
     private String description;
     private String reward;
 
 
-    public Badge(int id){
+    public Badge(int id, int progress){
         this.id = id;
+        this.progress = progress;
     }
 
     public int getId() {
@@ -29,7 +30,7 @@ public class Badge {
         return amount;
     }
 
-    public String getProgress() {
+    public int getProgress() {
         return progress;
     }
 
@@ -53,7 +54,7 @@ public class Badge {
         this.amount = amount;
     }
 
-    public void setProgress(String progress) {
+    public void setProgress(int progress) {
         this.progress = progress;
     }
 
