@@ -36,6 +36,71 @@ public class BadgesPointsActivity extends AppCompatActivity {
         actionBar.setDisplayHomeAsUpEnabled(true);
         // Get loyalty points
         getPoints();
+        // Reset badges
+        resetBadges();
+        // Get Badges
+        getBadges();
+
+    }
+
+    private void resetBadges() {
+        //Loop through badges
+        for (int i = 0; i < 15; i++){
+            switch (i) {
+                case 0:
+                    makeBlackWhite((ImageView)findViewById(R.id.badge1_image));
+                    break;
+                case 1:
+                    makeBlackWhite((ImageView)findViewById(R.id.badge2_image));
+                    break;
+                case 2:
+                    makeBlackWhite((ImageView)findViewById(R.id.badge3_image));
+                    break;
+                case 3:
+                    makeBlackWhite((ImageView)findViewById(R.id.badge4_image));
+                    break;
+                case 4:
+                    makeBlackWhite((ImageView)findViewById(R.id.badge5_image));
+                    break;
+                case 5:
+                    makeBlackWhite((ImageView)findViewById(R.id.badge6_image));
+                    break;
+                case 6:
+                    makeBlackWhite((ImageView)findViewById(R.id.badge7_image));
+                    break;
+                case 7:
+                    makeBlackWhite((ImageView)findViewById(R.id.badge8_image));
+                    break;
+                case 8:
+                    makeBlackWhite((ImageView)findViewById(R.id.badge9_image));
+                    break;
+                case 9:
+                    makeBlackWhite((ImageView)findViewById(R.id.badge10_image));
+                    break;
+                case 10:
+                    makeBlackWhite((ImageView)findViewById(R.id.badge11_image));
+                    break;
+                case 11:
+                    makeBlackWhite((ImageView)findViewById(R.id.badge12_image));
+                    break;
+                case 12:
+                    makeBlackWhite((ImageView)findViewById(R.id.badge13_image));
+                    break;
+                case 13:
+                    makeBlackWhite((ImageView)findViewById(R.id.badge14_image));
+                    break;
+                case 14:
+                    makeBlackWhite((ImageView)findViewById(R.id.badge15_image));
+                    break;
+            }
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        // Get loyalty points
+        getPoints();
         // Get Badges
         getBadges();
     }
@@ -55,7 +120,7 @@ public class BadgesPointsActivity extends AppCompatActivity {
                 int progress;
                 ArrayList badges = new ArrayList();
                 try {
-                    url = new URL("http://demo7168011.mockable.io/getBadges");
+                    url = new URL("http://192.168.137.1:8081/getBadges/tilenav");
                     // Create connection
                     HttpURLConnection connection =
                             (HttpURLConnection) url.openConnection();
@@ -73,10 +138,11 @@ public class BadgesPointsActivity extends AppCompatActivity {
 
                         //Parsing JSON
                         JsonReader jsonReader = new JsonReader(responseBodyReader);
-                        jsonReader.beginObject(); // Start processing the JSON object
+                        jsonReader.beginArray();
+                        //jsonReader.beginObject(); // Start processing the JSON object
                         while (jsonReader.hasNext()) { // Loop through all keys
                             //badgex
-                            jsonReader.nextName();
+                           // jsonReader.nextName();
                             //Go in each badge
                             jsonReader.beginObject();
                             //Badge id
@@ -86,6 +152,7 @@ public class BadgesPointsActivity extends AppCompatActivity {
                             jsonReader.nextName();
                             progress = jsonReader.nextInt();
                             jsonReader.endObject();
+
 
                             //Add to array
                             badges.add(new Badge(id, progress));
@@ -119,7 +186,8 @@ public class BadgesPointsActivity extends AppCompatActivity {
                 // Create URL
                 URL url = null;
                 try {
-                    url = new URL("http://demo7168011.mockable.io/getPoints");
+                    //url = new URL("http://demo7168011.mockable.io/getPoints");
+                    url = new URL("http://192.168.137.1:8081/getPoints/tilenav");
                     // Create connection
                     HttpURLConnection connection =
                             (HttpURLConnection) url.openConnection();
@@ -137,6 +205,7 @@ public class BadgesPointsActivity extends AppCompatActivity {
 
                         //Parsing JSON
                         JsonReader jsonReader = new JsonReader(responseBodyReader);
+                        jsonReader.beginArray();
                         jsonReader.beginObject(); // Start processing the JSON object
                         while (jsonReader.hasNext()) { // Loop through all keys
                             String key = jsonReader.nextName(); // Fetch the next key
@@ -171,97 +240,107 @@ public class BadgesPointsActivity extends AppCompatActivity {
             switch (badges.get(i).getId()) {
                 case 0:
                     setProgress((TextView)findViewById(R.id.badge1_data2), badges.get(i).getProgress(), 1);
-                    if (badges.get(i).getProgress() < 1) {
-                        makeBlackWhite((ImageView)findViewById(R.id.badge1_image));
+                    if (badges.get(i).getProgress() >= 1) {
+                        makeColor((ImageView)findViewById(R.id.badge1_image));
                     }
                     break;
                 case 1:
                     setProgress((TextView)findViewById(R.id.badge2_data2), badges.get(i).getProgress(), 2);
-                    if (badges.get(i).getProgress() < 2) {
-                        makeBlackWhite((ImageView)findViewById(R.id.badge2_image));
+                    if (badges.get(i).getProgress() >= 2) {
+                        makeColor((ImageView)findViewById(R.id.badge2_image));
                     }
                     break;
                 case 2:
                     setProgress((TextView)findViewById(R.id.badge3_data2), badges.get(i).getProgress(), 3);
-                    if (badges.get(i).getProgress() < 3) {
-                        makeBlackWhite((ImageView)findViewById(R.id.badge3_image));
+                    if (badges.get(i).getProgress() >= 3) {
+                        makeColor((ImageView)findViewById(R.id.badge3_image));
                     }
                     break;
                 case 3:
                     setProgress((TextView)findViewById(R.id.badge4_data2), badges.get(i).getProgress(), 6);
-                    if (badges.get(i).getProgress() < 6) {
-                        makeBlackWhite((ImageView)findViewById(R.id.badge4_image));
+                    if (badges.get(i).getProgress() >= 6) {
+                        makeColor((ImageView)findViewById(R.id.badge4_image));
                     }
                     break;
                 case 4:
                     setProgress((TextView)findViewById(R.id.badge5_data2), badges.get(i).getProgress(), 5);
-                    if (badges.get(i).getProgress() < 5) {
-                        makeBlackWhite((ImageView)findViewById(R.id.badge5_image));
+                    if (badges.get(i).getProgress() >= 5) {
+                        makeColor((ImageView)findViewById(R.id.badge5_image));
                     }
                     break;
                 case 5:
                     setProgress((TextView)findViewById(R.id.badge6_data2), badges.get(i).getProgress(), 10);
-                    if (badges.get(i).getProgress() < 10) {
-                        makeBlackWhite((ImageView)findViewById(R.id.badge6_image));
+                    if (badges.get(i).getProgress() >= 10) {
+                        makeColor((ImageView)findViewById(R.id.badge6_image));
                     }
                     break;
                 case 6:
                     setProgress((TextView)findViewById(R.id.badge7_data2), badges.get(i).getProgress(), 20);
-                    if (badges.get(i).getProgress() < 20) {
-                        makeBlackWhite((ImageView)findViewById(R.id.badge7_image));
+                    if (badges.get(i).getProgress() >= 20) {
+                        makeColor((ImageView)findViewById(R.id.badge7_image));
                     }
                     break;
                 case 7:
                     setProgress((TextView)findViewById(R.id.badge8_data2), badges.get(i).getProgress(), 50);
-                    if (badges.get(i).getProgress() < 50) {
-                        makeBlackWhite((ImageView)findViewById(R.id.badge8_image));
+                    if (badges.get(i).getProgress() >= 50) {
+                        makeColor((ImageView)findViewById(R.id.badge8_image));
                     }
                     break;
                 case 8:
                     setProgress((TextView)findViewById(R.id.badge9_data2), badges.get(i).getProgress(), 100);
-                    if (badges.get(i).getProgress() < 100) {
-                        makeBlackWhite((ImageView)findViewById(R.id.badge9_image));
+                    if (badges.get(i).getProgress() >= 100) {
+                        makeColor((ImageView)findViewById(R.id.badge9_image));
                     }
                     break;
                 case 9:
                     setProgress((TextView)findViewById(R.id.badge10_data2), badges.get(i).getProgress(), 1);
-                    if (badges.get(i).getProgress() < 1) {
-                        makeBlackWhite((ImageView)findViewById(R.id.badge10_image));
+                    if (badges.get(i).getProgress() >= 1) {
+                        makeColor((ImageView)findViewById(R.id.badge10_image));
                     }
                     break;
                 case 10:
                     setProgress((TextView)findViewById(R.id.badge11_data2), badges.get(i).getProgress(), 20);
-                    if (badges.get(i).getProgress() < 20) {
-                        makeBlackWhite((ImageView)findViewById(R.id.badge11_image));
+                    if (badges.get(i).getProgress() >= 20) {
+                        makeColor((ImageView)findViewById(R.id.badge11_image));
                     }
                     break;
                 case 11:
                     setProgress((TextView)findViewById(R.id.badge12_data2), badges.get(i).getProgress(), 7);
-                    if (badges.get(i).getProgress() < 7) {
-                        makeBlackWhite((ImageView)findViewById(R.id.badge12_image));
+                    if (badges.get(i).getProgress() >= 7) {
+                        makeColor((ImageView)findViewById(R.id.badge12_image));
                     }
                     break;
                 case 12:
                     setProgress((TextView)findViewById(R.id.badge13_data2), badges.get(i).getProgress(), 4);
-                    if (badges.get(i).getProgress() < 4) {
-                        makeBlackWhite((ImageView)findViewById(R.id.badge13_image));
+                    if (badges.get(i).getProgress() >= 4) {
+                        makeColor((ImageView)findViewById(R.id.badge13_image));
                     }
                     break;
                 case 13:
                     setProgress((TextView)findViewById(R.id.badge14_data2), badges.get(i).getProgress(), 6);
-                    if (badges.get(i).getProgress() < 6) {
-                        makeBlackWhite((ImageView)findViewById(R.id.badge14_image));
+                    if (badges.get(i).getProgress() >= 6) {
+                        makeColor((ImageView)findViewById(R.id.badge14_image));
                     }
                     break;
                 case 14:
                     setProgress((TextView)findViewById(R.id.badge15_data2), badges.get(i).getProgress(), 20);
-                    if (badges.get(i).getProgress() < 20) {
-                        makeBlackWhite((ImageView)findViewById(R.id.badge15_image));
+                    if (badges.get(i).getProgress() >= 20) {
+                        makeColor((ImageView)findViewById(R.id.badge15_image));
                     }
                     break;
             }
         }
 
+    }
+
+    private void makeColor(ImageView badge){
+        // Make image color if user has badge
+        ImageView imageview = badge;
+        ColorMatrix matrix = new ColorMatrix();
+        matrix.setSaturation(1);
+
+        ColorMatrixColorFilter filter = new ColorMatrixColorFilter(matrix);
+        imageview.setColorFilter(filter);
     }
 
     private void makeBlackWhite(ImageView badge){

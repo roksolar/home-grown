@@ -11,7 +11,6 @@ import android.widget.LinearLayout;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link ExploreFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
  * Use the {@link ExploreFragment#newInstance} factory method to
  * create an instance of this fragment.
@@ -44,6 +43,7 @@ public class ExploreFragment extends Fragment {
             public void onClick(View view) {
                 //Start checkout activity
                 Intent intent = new Intent(getActivity(), CheckOutActivity.class);
+                intent.putExtra("idKosarice", 1);
                 startActivity(intent);
             }
         });
@@ -52,6 +52,7 @@ public class ExploreFragment extends Fragment {
             public void onClick(View view) {
                 //Start checkout activity
                 Intent intent = new Intent(getActivity(), CheckOutActivity.class);
+                intent.putExtra("idKosarice", 2);
                 startActivity(intent);
             }
         });
@@ -60,6 +61,7 @@ public class ExploreFragment extends Fragment {
             public void onClick(View view) {
                 //Start checkout activity
                 Intent intent = new Intent(getActivity(), CheckOutActivity.class);
+                intent.putExtra("idKosarice", 3);
                 startActivity(intent);
             }
         });
@@ -68,6 +70,7 @@ public class ExploreFragment extends Fragment {
             public void onClick(View view) {
                 //Start checkout activity
                 Intent intent = new Intent(getActivity(), CheckOutActivity.class);
+                intent.putExtra("idKosarice", 4);
                 startActivity(intent);
             }
         });

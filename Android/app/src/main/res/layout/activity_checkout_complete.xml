@@ -15,7 +15,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:layout_weight="1"
             android:background="@color/cardview_light_background"
@@ -26,7 +26,7 @@
             <TextView
                 android:id="@+id/textView"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="80dp"
                 android:layout_weight="1"
                 android:paddingBottom="6dp"
                 android:text="Payment successful!"
@@ -36,7 +36,7 @@
             <TextView
                 android:id="@+id/textView6"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="60dp"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/textView"
                 android:layout_weight="1"
@@ -46,13 +46,13 @@
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical" >
+                android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -76,6 +76,101 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@color/cardview_light_background"
+                        android:elevation="4dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/badge1_image"
+
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:padding="0dp"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@mipmap/first_time" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:orientation="vertical"
+                            android:paddingRight="20dp">
+
+                            <TextView
+                                android:id="@+id/badge1_data1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:text="Buy something for the first time"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/badge1_data2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:text="0/1" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@color/cardview_light_background"
+                        android:elevation="4dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/badge2_image"
+
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:padding="0dp"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@mipmap/badge_double_time" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:orientation="vertical"
+                            android:paddingRight="20dp">
+
+                            <TextView
+                                android:id="@+id/badge2_data1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:text=" Buy twice in one day (>10€ each time)"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/badge2_data2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:text="0/2" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
                         android:background="@color/cardview_light_background"
                         android:elevation="4dp"
                         android:gravity="center"
@@ -88,7 +183,7 @@
                             android:layout_height="100dp"
                             android:padding="0dp"
                             android:scaleType="fitXY"
-                            app:srcCompat="@mipmap/badge_eko1" />
+                            app:srcCompat="@mipmap/badge_triple_time" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -104,7 +199,8 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:gravity="center_vertical"
-                                android:text="Podatki 1" />
+                                android:text="Buy three times in one day (>10€ each time)"
+                                android:textStyle="bold" />
 
                             <TextView
                                 android:id="@+id/badge3_data2"
@@ -112,7 +208,571 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:gravity="center_vertical"
-                                android:text="Podatki 2" />
+                                android:text="0/3" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@color/cardview_light_background"
+                        android:elevation="4dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/badge4_image"
+
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:padding="0dp"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@mipmap/badge_variety" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:orientation="vertical"
+                            android:paddingRight="20dp">
+
+                            <TextView
+                                android:id="@+id/badge4_data1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:text="Buy from all categories"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/badge4_data2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:text="0/6" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@color/cardview_light_background"
+                        android:elevation="4dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/badge5_image"
+
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:padding="0dp"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@mipmap/badge_eko5x" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:orientation="vertical"
+                            android:paddingRight="20dp">
+
+                            <TextView
+                                android:id="@+id/badge5_data1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:text="Buy 5 times from your closest farm"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/badge5_data2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:text="0/5" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@color/cardview_light_background"
+                        android:elevation="4dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/badge6_image"
+
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:padding="0dp"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@mipmap/badge_eko_10x" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:orientation="vertical"
+                            android:paddingRight="20dp">
+
+                            <TextView
+                                android:id="@+id/badge6_data1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:text="Buy 10 times from your closest farm"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/badge6_data2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:text="0/10" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@color/cardview_light_background"
+                        android:elevation="4dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/badge7_image"
+
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:padding="0dp"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@mipmap/badge_eko_20x" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:orientation="vertical"
+                            android:paddingRight="20dp">
+
+                            <TextView
+                                android:id="@+id/badge7_data1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:text="Buy 20 times from your closest farm"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/badge7_data2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:text="0/20" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@color/cardview_light_background"
+                        android:elevation="4dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/badge8_image"
+
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:padding="0dp"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@mipmap/badge_eko_50x" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:orientation="vertical"
+                            android:paddingRight="20dp">
+
+                            <TextView
+                                android:id="@+id/badge8_data1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:text="Buy 50 times from your closest farm"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/badge8_data2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:text="0/50" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@color/cardview_light_background"
+                        android:elevation="4dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/badge9_image"
+
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:padding="0dp"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@mipmap/badge_eko_100x" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:orientation="vertical"
+                            android:paddingRight="20dp">
+
+                            <TextView
+                                android:id="@+id/badge9_data1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:text="Buy 100 times from your closest farm"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/badge9_data2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:text="0/100" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@color/cardview_light_background"
+                        android:elevation="4dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/badge10_image"
+
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:padding="0dp"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@mipmap/badge_go_big" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:orientation="vertical"
+                            android:paddingRight="20dp">
+
+                            <TextView
+                                android:id="@+id/badge10_data1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:text="Buy 150€ worth in one purchase"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/badge10_data2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:text="0/1" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@color/cardview_light_background"
+                        android:elevation="4dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/badge11_image"
+
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:padding="0dp"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@mipmap/badge_loyality" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:orientation="vertical"
+                            android:paddingRight="20dp">
+
+                            <TextView
+                                android:id="@+id/badge11_data1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:text="Buy 20 times from the same farm"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/badge11_data2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:text="0/20" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@color/cardview_light_background"
+                        android:elevation="4dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/badge12_image"
+
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:padding="0dp"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@mipmap/badge_persistance_day" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:orientation="vertical"
+                            android:paddingRight="20dp">
+
+                            <TextView
+                                android:id="@+id/badge12_data1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:text="Make a purchase 7 days in a row"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/badge12_data2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:text="0/7" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@color/cardview_light_background"
+                        android:elevation="4dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/badge13_image"
+
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:padding="0dp"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@mipmap/badge_persistance_week" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:orientation="vertical"
+                            android:paddingRight="20dp">
+
+                            <TextView
+                                android:id="@+id/badge13_data1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:text="Make a purchase weekly for 4 weeks"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/badge13_data2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:text="0/4" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@color/cardview_light_background"
+                        android:elevation="4dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/badge14_image"
+
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:padding="0dp"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@mipmap/badge_persistance_month" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:orientation="vertical"
+                            android:paddingRight="20dp">
+
+                            <TextView
+                                android:id="@+id/badge14_data1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:text="Make a purchase monthy for 6 months"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/badge14_data2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:text="0/6" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@color/cardview_light_background"
+                        android:elevation="4dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/badge15_image"
+
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:padding="0dp"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@mipmap/badge_seen_all" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:orientation="vertical"
+                            android:paddingRight="20dp">
+
+                            <TextView
+                                android:id="@+id/badge15_data1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:text="Buy from 20 different farms"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/badge15_data2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:text="0/20" />
                         </LinearLayout>
 
                     </LinearLayout>

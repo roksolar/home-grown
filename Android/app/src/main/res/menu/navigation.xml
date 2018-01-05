@@ -6,10 +6,6 @@
         android:title="Explore" />
 
     <item
-        android:id="@+id/navigation_producers"
-        android:icon="@drawable/ic_home_black_24dp"
-        android:title="Producers" />
-    <item
         android:id="@+id/navigation_profile"
         android:icon="@drawable/ic_account"
         android:title="Profile" />

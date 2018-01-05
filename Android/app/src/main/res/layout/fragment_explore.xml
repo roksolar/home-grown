@@ -52,7 +52,7 @@
                     android:layout_weight="1"
                     android:paddingBottom="10dp"
                     android:paddingLeft="10dp"
-                    android:text="Opis in namen košarice" />
+                    android:text="Za znački VARIETY in EKO 5x" />
             </LinearLayout>
 
             <LinearLayout
@@ -82,7 +82,7 @@
                     android:layout_weight="1"
                     android:paddingBottom="10dp"
                     android:paddingLeft="10dp"
-                    android:text="Opis in namen košarice" />
+                    android:text="Za značko GO BIG OR GO HOME" />
             </LinearLayout>
 
             <LinearLayout

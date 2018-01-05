@@ -33,8 +33,8 @@ public class MainActivity extends AppCompatActivity {
                     transaction.replace(R.id.fragment_frame, selectedFragment);
                     transaction.commit();
                     return true;
-                case R.id.navigation_producers:
-                    return true;
+                //case R.id.navigation_producers:
+                 //   return true;
                 case R.id.navigation_profile:
                     selectedFragment = ProfileFragment.newInstance();
                     transaction = getSupportFragmentManager().beginTransaction();
