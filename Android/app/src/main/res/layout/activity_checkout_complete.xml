@@ -26,7 +26,7 @@
             <TextView
                 android:id="@+id/textView"
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:paddingBottom="6dp"
                 android:text="Payment successful!"
@@ -36,7 +36,7 @@
             <TextView
                 android:id="@+id/textView6"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/textView"
                 android:layout_weight="1"
@@ -73,6 +73,7 @@
                         android:textStyle="bold" />
 
                     <LinearLayout
+                        android:id="@+id/badge1"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="5dp"
@@ -80,7 +81,8 @@
                         android:background="@color/cardview_light_background"
                         android:elevation="4dp"
                         android:gravity="center"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:visibility="gone">
 
                         <ImageView
                             android:id="@+id/badge1_image"
@@ -109,7 +111,7 @@
                                 android:textStyle="bold" />
 
                             <TextView
-                                android:id="@+id/badge1_data2"
+                                android:id="@+id/badge11_data2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -120,6 +122,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/badge2"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="5dp"
@@ -127,7 +130,8 @@
                         android:background="@color/cardview_light_background"
                         android:elevation="4dp"
                         android:gravity="center"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:visibility="gone">
 
                         <ImageView
                             android:id="@+id/badge2_image"
@@ -156,7 +160,7 @@
                                 android:textStyle="bold" />
 
                             <TextView
-                                android:id="@+id/badge2_data2"
+                                android:id="@+id/badge21_data2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -167,6 +171,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/badge3"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="5dp"
@@ -174,7 +179,8 @@
                         android:background="@color/cardview_light_background"
                         android:elevation="4dp"
                         android:gravity="center"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:visibility="gone">
 
                         <ImageView
                             android:id="@+id/badge3_image"
@@ -203,7 +209,7 @@
                                 android:textStyle="bold" />
 
                             <TextView
-                                android:id="@+id/badge3_data2"
+                                android:id="@+id/badge31_data2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -214,6 +220,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/badge4"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="5dp"
@@ -221,7 +228,8 @@
                         android:background="@color/cardview_light_background"
                         android:elevation="4dp"
                         android:gravity="center"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:visibility="gone">
 
                         <ImageView
                             android:id="@+id/badge4_image"
@@ -250,7 +258,7 @@
                                 android:textStyle="bold" />
 
                             <TextView
-                                android:id="@+id/badge4_data2"
+                                android:id="@+id/badge41_data2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -261,6 +269,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/badge5"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="5dp"
@@ -268,7 +277,8 @@
                         android:background="@color/cardview_light_background"
                         android:elevation="4dp"
                         android:gravity="center"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:visibility="gone">
 
                         <ImageView
                             android:id="@+id/badge5_image"
@@ -297,7 +307,7 @@
                                 android:textStyle="bold" />
 
                             <TextView
-                                android:id="@+id/badge5_data2"
+                                android:id="@+id/badge51_data2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -308,6 +318,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/badge6"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="5dp"
@@ -315,7 +326,8 @@
                         android:background="@color/cardview_light_background"
                         android:elevation="4dp"
                         android:gravity="center"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:visibility="gone">
 
                         <ImageView
                             android:id="@+id/badge6_image"
@@ -344,7 +356,7 @@
                                 android:textStyle="bold" />
 
                             <TextView
-                                android:id="@+id/badge6_data2"
+                                android:id="@+id/badge61_data2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -355,6 +367,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/badge7"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="5dp"
@@ -362,7 +375,8 @@
                         android:background="@color/cardview_light_background"
                         android:elevation="4dp"
                         android:gravity="center"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:visibility="gone">
 
                         <ImageView
                             android:id="@+id/badge7_image"
@@ -391,7 +405,7 @@
                                 android:textStyle="bold" />
 
                             <TextView
-                                android:id="@+id/badge7_data2"
+                                android:id="@+id/badge71_data2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -402,6 +416,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/badge8"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="5dp"
@@ -409,7 +424,8 @@
                         android:background="@color/cardview_light_background"
                         android:elevation="4dp"
                         android:gravity="center"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:visibility="gone">
 
                         <ImageView
                             android:id="@+id/badge8_image"
@@ -438,7 +454,7 @@
                                 android:textStyle="bold" />
 
                             <TextView
-                                android:id="@+id/badge8_data2"
+                                android:id="@+id/badge81_data2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -449,6 +465,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/badge9"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="5dp"
@@ -456,7 +473,8 @@
                         android:background="@color/cardview_light_background"
                         android:elevation="4dp"
                         android:gravity="center"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:visibility="gone">
 
                         <ImageView
                             android:id="@+id/badge9_image"
@@ -485,7 +503,7 @@
                                 android:textStyle="bold" />
 
                             <TextView
-                                android:id="@+id/badge9_data2"
+                                android:id="@+id/badge91_data2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -496,6 +514,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/badge10"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="5dp"
@@ -503,7 +522,8 @@
                         android:background="@color/cardview_light_background"
                         android:elevation="4dp"
                         android:gravity="center"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:visibility="gone">
 
                         <ImageView
                             android:id="@+id/badge10_image"
@@ -532,7 +552,7 @@
                                 android:textStyle="bold" />
 
                             <TextView
-                                android:id="@+id/badge10_data2"
+                                android:id="@+id/badge101_data2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -543,6 +563,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/badge11"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="5dp"
@@ -550,7 +571,8 @@
                         android:background="@color/cardview_light_background"
                         android:elevation="4dp"
                         android:gravity="center"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:visibility="gone">
 
                         <ImageView
                             android:id="@+id/badge11_image"
@@ -579,7 +601,7 @@
                                 android:textStyle="bold" />
 
                             <TextView
-                                android:id="@+id/badge11_data2"
+                                android:id="@+id/badge111_data2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -590,6 +612,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/badge12"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="5dp"
@@ -597,7 +620,8 @@
                         android:background="@color/cardview_light_background"
                         android:elevation="4dp"
                         android:gravity="center"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:visibility="gone">
 
                         <ImageView
                             android:id="@+id/badge12_image"
@@ -626,7 +650,7 @@
                                 android:textStyle="bold" />
 
                             <TextView
-                                android:id="@+id/badge12_data2"
+                                android:id="@+id/badge121_data2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -637,6 +661,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/badge13"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="5dp"
@@ -644,7 +669,8 @@
                         android:background="@color/cardview_light_background"
                         android:elevation="4dp"
                         android:gravity="center"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:visibility="gone">
 
                         <ImageView
                             android:id="@+id/badge13_image"
@@ -673,7 +699,7 @@
                                 android:textStyle="bold" />
 
                             <TextView
-                                android:id="@+id/badge13_data2"
+                                android:id="@+id/badge131_data2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -684,6 +710,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/badge14"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="5dp"
@@ -691,7 +718,8 @@
                         android:background="@color/cardview_light_background"
                         android:elevation="4dp"
                         android:gravity="center"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:visibility="gone">
 
                         <ImageView
                             android:id="@+id/badge14_image"
@@ -720,7 +748,7 @@
                                 android:textStyle="bold" />
 
                             <TextView
-                                android:id="@+id/badge14_data2"
+                                android:id="@+id/badge141_data2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -731,6 +759,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/badge15"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="5dp"
@@ -738,7 +767,8 @@
                         android:background="@color/cardview_light_background"
                         android:elevation="4dp"
                         android:gravity="center"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:visibility="gone">
 
                         <ImageView
                             android:id="@+id/badge15_image"
@@ -767,7 +797,7 @@
                                 android:textStyle="bold" />
 
                             <TextView
-                                android:id="@+id/badge15_data2"
+                                android:id="@+id/badge151_data2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"

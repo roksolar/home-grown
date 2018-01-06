@@ -1,22 +1,40 @@
 package mpsp.homegrown;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 /**
  * Created by rokso on 28. 12. 2017.
  */
 
-public class Badge {
+public class Badge implements Parcelable{
     private int id;
     private String name;
-    private int amount;
     private int progress;
-    private String description;
-    private String reward;
 
 
     public Badge(int id, int progress){
         this.id = id;
         this.progress = progress;
     }
+
+    protected Badge(Parcel in) {
+        id = in.readInt();
+        name = in.readString();
+        progress = in.readInt();
+    }
+
+    public static final Creator<Badge> CREATOR = new Creator<Badge>() {
+        @Override
+        public Badge createFromParcel(Parcel in) {
+            return new Badge(in);
+        }
+
+        @Override
+        public Badge[] newArray(int size) {
+            return new Badge[size];
+        }
+    };
 
     public int getId() {
         return id;
@@ -26,20 +44,8 @@ public class Badge {
         return name;
     }
 
-    public int getAmount() {
-        return amount;
-    }
-
     public int getProgress() {
         return progress;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public String getReward() {
-        return reward;
     }
 
     public void setId(int id) {
@@ -50,19 +56,17 @@ public class Badge {
         this.name = name;
     }
 
-    public void setAmount(int amount) {
-        this.amount = amount;
+
+    @Override
+    public int describeContents() {
+        return 0;
     }
 
-    public void setProgress(int progress) {
-        this.progress = progress;
-    }
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeInt(id);
+        parcel.writeString(name);
+        parcel.writeInt(progress);
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public void setReward(String reward) {
-        this.reward = reward;
     }
 }

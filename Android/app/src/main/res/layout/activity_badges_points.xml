@@ -102,7 +102,7 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/badge11_data2"
+                            android:id="@+id/badge1_data2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -149,7 +149,7 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/badge21_data2"
+                            android:id="@+id/badge2_data2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -196,7 +196,7 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/badge31_data2"
+                            android:id="@+id/badge3_data2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -243,7 +243,7 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/badge41_data2"
+                            android:id="@+id/badge4_data2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -290,7 +290,7 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/badge51_data2"
+                            android:id="@+id/badge5_data2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -338,7 +338,7 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/badge61_data2"
+                            android:id="@+id/badge6_data2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -386,7 +386,7 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/badge71_data2"
+                            android:id="@+id/badge7_data2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -434,7 +434,7 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/badge81_data2"
+                            android:id="@+id/badge8_data2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -482,7 +482,7 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/badge91_data2"
+                            android:id="@+id/badge9_data2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -530,7 +530,7 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/badge101_data2"
+                            android:id="@+id/badge10_data2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -578,7 +578,7 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/badge111_data2"
+                            android:id="@+id/badge11_data2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -626,7 +626,7 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/badge121_data2"
+                            android:id="@+id/badge12_data2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -674,7 +674,7 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/badge131_data2"
+                            android:id="@+id/badge13_data2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -722,7 +722,7 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/badge141_data2"
+                            android:id="@+id/badge14_data2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -770,7 +770,7 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/badge151_data2"
+                            android:id="@+id/badge15_data2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
