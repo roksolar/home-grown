@@ -25,6 +25,9 @@ import java.util.ArrayList;
 
 public class CheckOutActivity extends AppCompatActivity {
 
+    private int tocke;
+    private int orderType;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,9 +56,10 @@ public class CheckOutActivity extends AppCompatActivity {
                 (findViewById(R.id.four)).setVisibility(View.VISIBLE);
                 (findViewById(R.id.five)).setVisibility(View.VISIBLE);
                 //Show price
-                ((TextView) findViewById(R.id.totalPrice)).setText("32.3€");
                 price = 32.3;
+                ((TextView) findViewById(R.id.totalPrice)).setText(Double.toString(price));
 
+                orderType = 0;
                 break;
             case 2:
                 //Košarica za go big or go home značko
@@ -67,17 +71,32 @@ public class CheckOutActivity extends AppCompatActivity {
                 (findViewById(R.id.six)).setVisibility(View.VISIBLE);
                 (findViewById(R.id.seven)).setVisibility(View.VISIBLE);
                 //Show price
-                ((TextView) findViewById(R.id.totalPrice)).setText("166.7€");
                 price = 166.7;
+                ((TextView) findViewById(R.id.totalPrice)).setText(Double.toString(price));
+
+                orderType = 1;
                 break;
             case 3:
-                price = 0;
+                //Košarica za go big or go home značko
+                //Show items
+                //(findViewById(R.id.one)).setVisibility(View.VISIBLE);
+                (findViewById(R.id.two)).setVisibility(View.VISIBLE);
+                (findViewById(R.id.three)).setVisibility(View.VISIBLE);;
+                //(findViewById(R.id.six)).setVisibility(View.VISIBLE);
+                //(findViewById(R.id.seven)).setVisibility(View.VISIBLE);
+                //Show price
+                price = 152.7;
+                ((TextView) findViewById(R.id.totalPrice)).setText(Double.toString(price));
+
+                orderType = 2;
                 break;
             case 4:
                 price = 0;
+                orderType = 3;
                 break;
             default:
                 price = 0;
+                orderType = 4;
         }
 
         //Setup seekbar for loyality points
@@ -90,6 +109,7 @@ public class CheckOutActivity extends AppCompatActivity {
                 ((TextView) findViewById(R.id.loyalityPoints)).setText("" + progress);
                 double scale = Math.pow(10, 2);
                 ((TextView) findViewById(R.id.totalPrice)).setText(Double.toString(Math.round((price-(progress/1000.0))*scale)/scale));
+                tocke = progress;
 
             }
             @Override
@@ -185,16 +205,19 @@ public class CheckOutActivity extends AppCompatActivity {
 
                 try {
                     //url = new URL("http://demo7168011.mockable.io/getPoints");
-                    url = new URL("http://demo7168011.mockable.io/order");
-                    //url = new URL("http://192.168.137.1:8081/order");
+                    //url = new URL("http://demo7168011.mockable.io/order");
+                    url = new URL("http://192.168.137.1:8081/order/tilenav");
                     // Create connection
                     HttpURLConnection connection =
                             (HttpURLConnection) url.openConnection();
                     connection.setDoOutput(true);
                     connection.setRequestProperty("User-Agent", "HomeGrown");
+                    connection.setRequestProperty("Content-Type", "application/json");
                     connection.setRequestMethod("PUT");
 
+
                     //Build JSON
+                    JSONObject outerJson = new JSONObject();
                     JSONArray json = new JSONArray();
                     for (int i = 0; i < 8; i++){
                         switch (i){
@@ -264,12 +287,16 @@ public class CheckOutActivity extends AppCompatActivity {
                                 break;
                         }
                     }
+                    outerJson.put("products", json);
+                    outerJson.put("usePoints", tocke);
+                    outerJson.put("cart", orderType);
 
+                    Log.i("JSON ", outerJson.toString());
                     //Log.i("DATA", json.toString());
 
                     OutputStreamWriter out = new OutputStreamWriter(
                             connection.getOutputStream());
-                    out.write(json.toString());
+                    out.write(outerJson.toString());
                     out.close();
 
                     if (connection.getResponseCode() == 200) {
@@ -293,6 +320,8 @@ public class CheckOutActivity extends AppCompatActivity {
                             //Badge id
                             jsonReader.nextName();
                             id = jsonReader.nextInt();
+                            Log.i("ID", Integer.toString(id));
+
                             //Badge name
                             jsonReader.nextName();
                             progress = jsonReader.nextInt();
@@ -300,8 +329,9 @@ public class CheckOutActivity extends AppCompatActivity {
 
                             //Add to array
                             badges.add(new Badge(id, progress));
-                            finishCheckout(badges);
+
                         }
+                        finishCheckout(badges);
                     } else {
                         Log.e("Error", "Response code not 200.");
                     }

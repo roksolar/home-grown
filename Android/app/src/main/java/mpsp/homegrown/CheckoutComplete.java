@@ -3,6 +3,7 @@ package mpsp.homegrown;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -25,7 +26,7 @@ public class CheckoutComplete extends AppCompatActivity {
     private void processBadges() {
         Intent intent = getIntent();
         ArrayList<Badge> badges = intent.getParcelableArrayListExtra("badges");
-
+        Log.i("Badges", Integer.toString(badges.size()));
         //Loop through badges
         for (int i = 0; i < badges.size(); i++){
             switch (badges.get(i).getId()) {
@@ -81,10 +82,10 @@ public class CheckoutComplete extends AppCompatActivity {
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                if (progress >= maxProgress){
+                //if (progress >= maxProgress){
                     badge.setVisibility(View.VISIBLE);
                     progressView.setText(Integer.toString(progress) + "/" + Integer.toString(maxProgress));
-                }
+               // }
             }
         });
 

@@ -22,7 +22,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:padding="15dp"
-                android:text="KOŠARICE"
+                android:text="SHOPPING CART"
                 android:textStyle="bold" />
 
             <LinearLayout
@@ -41,7 +41,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:padding="10dp"
-                    android:text="Košarica 1"
+                    android:text="CART 1"
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
@@ -51,8 +51,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:paddingBottom="10dp"
-                    android:paddingLeft="10dp"
-                    android:text="Za znački VARIETY in EKO 5x" />
+                    android:paddingLeft="10dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -71,7 +70,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:padding="10dp"
-                    android:text="Košarica 2"
+                    android:text="CART 2"
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
@@ -81,8 +80,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:paddingBottom="10dp"
-                    android:paddingLeft="10dp"
-                    android:text="Za značko GO BIG OR GO HOME" />
+                    android:paddingLeft="10dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -101,7 +99,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:padding="10dp"
-                    android:text="Košarica 3"
+                    android:text="CART 3"
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
@@ -111,8 +109,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:paddingBottom="10dp"
-                    android:paddingLeft="10dp"
-                    android:text="Opis in namen košarice" />
+                    android:paddingLeft="10dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -123,7 +120,8 @@
                 android:layout_weight="1"
                 android:background="@color/cardview_light_background"
                 android:elevation="4dp"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:visibility="gone">
 
                 <TextView
                     android:id="@+id/textView10"

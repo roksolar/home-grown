@@ -68,7 +68,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0"
                 android:paddingLeft="5dp"
-                android:text="16.4€"
+                android:text="0€"
                 android:textSize="24sp"
                 android:textStyle="bold" />
         </LinearLayout>
@@ -454,20 +454,21 @@
                         android:text="4€" />
                 </LinearLayout>
 
+                <Button
+                    android:id="@+id/checkoutPayB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="#465d43"
+                    android:onClick="pay"
+                    android:text="Pay"
+                    android:textColor="@color/cardview_light_background"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="465dp" />
+
             </LinearLayout>
         </ScrollView>
-
-        <Button
-            android:id="@+id/checkoutPayB"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:background="#465d43"
-            android:onClick="pay"
-            android:text="Pay"
-            android:textColor="@color/cardview_light_background"
-            tools:layout_editor_absoluteX="8dp"
-            tools:layout_editor_absoluteY="465dp" />
 
     </LinearLayout>
 

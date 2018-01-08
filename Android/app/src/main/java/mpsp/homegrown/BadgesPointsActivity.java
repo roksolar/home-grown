@@ -127,6 +127,7 @@ public class BadgesPointsActivity extends AppCompatActivity {
 
                     connection.setRequestProperty("User-Agent", "HomeGrown");
                     connection.setRequestProperty("User", "krispret");
+
                     if (connection.getResponseCode() == 200) {
                         // Success
                         // Further processing here

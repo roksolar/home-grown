@@ -36,7 +36,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:padding="15dp"
-                android:text="500 (0.5€)" />
+                android:text="0 (0.0€)" />
 
         </LinearLayout>
 
